@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+    <meta charset="utf-8">
+    <meta name="author" content="G11">
+    <meta name="description" content="feedback">
+    <meta name="keywords" content="feedback">
+    <link rel="stylesheet" type="text/css" href="feedback&restaurant.css">
+</head>
+
+<body class="body-feedback">
+    <div class="navbar">
+        <a href="index.html">
+            <img src="photo_6125304580725129165_y.jpg" alt="TropiGO Logo" class="logo">
+        </a>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="Hotels.html">Hotels</a>
+            <a href="flight.html">Flights</a>
+            <a href="Destinations.html">Destinations</a>
+            <a href="restaurant_recommendation.html">Restaurants</a>
+            <a href="carhire.html">Car Rental</a>
+            <a href="AboutUs.html">About Us</a>
+        </div>
+        <span class="search-icon">🔍</span>
+    </div>
+    <header>
+        <h1>Website Feedback</h1>
+        <hr class="hr-feedback">
+    </header>
+
+    <article>
+        <p>Thank you for using our website. Do you have any feedback?</p>
+        <p>We welcome feedback from our customers - it helps us to continually improve.</p> 
+        <p>Let us know by filling out the form below. Your feedback is anonymous.</p>
+        <hr>
+        <br>
+
+        <form name="feedback" method="post" action="" enctype="text/plain">
+            <fieldset class="fieldset-default"><legend style="color: black;">Date and Time</legend>
+                <table>
+                    <tr>
+                        <td style="color: black;">Feedback Date</td>
+                        <td class="td-cover">
+                            <input type="date" name="feedback_date" placeholder="dd/mm/yyyy" class="dt_tm">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="color: black;">Feedback Time</td>
+                        <td>
+                            <input type="time" name="feedback_time" placeholder="--:-- --" class="dt_tm">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset class="fieldset-background"><legend>Feedback</legend>
+                <table>
+                    <tr class="rating">
+                        <td>What do you like from our website?</td>
+                        <td class="rate">
+                            <div class="checkboxes">
+                                <input type="checkbox" name="Background_pictures" value="Background_pictures" id="background_pictures">
+                                <label for="background_pictures">Background pictures</label>
+
+                                <input type="checkbox" name="arrangement" value="arrangement" id="arrangement">
+                                <label for="arrangement">Arrangement</label>
+
+                                <input type="checkbox" name="colour" value="colour" id="colour">
+                                <label for="colour">Use of colour</label>
+
+                                <input type="checkbox" name="design" value="design" id="design">
+                                <label for="design">Design</label>
+
+                                <input type="checkbox" name="content" value="content" id="content">
+                                <label for="content">Website content</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="rating">
+                        <td>What do you dislike from our website?</td>
+                        <td class="rate">
+                            <div class="checkboxes">
+                                <input type="checkbox" name="Background_pictures" value="Background_pictures" id="background_pictures">
+                                <label for="background_pictures">Background pictures</label>
+
+                                <input type="checkbox" name="arrangement" value="arrangement" id="arrangement">
+                                <label for="arrangement">Arrangement</label>
+
+                                <input type="checkbox" name="colour" value="colour" id="colour">
+                                <label for="colour">Use of colour</label>
+
+                                <input type="checkbox" name="design" value="design" id="design">
+                                <label for="design">Design</label>
+
+                                <input type="checkbox" name="content" value="content" id="content">
+                                <label for="content">Website content</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="rating">
+                        <td>How difficult it is to use our website?</td>
+                        <td class="rate">
+                            <div class="radios">
+                                <input type="radio" name="ez/hd" value="easy1" id="easy" required="required">
+                                <label id="label">1 (very easy)</label>
+
+                                <input type="radio" name="ez/hd" value="easy2" id="easy" required="required">
+                                <label id="label">2</label>
+
+                                <input type="radio" name="ez/hd" value="med3" id="easy" required="required">
+                                <label id="label">3</label>
+
+                                <input type="radio" name="ez/hd" value="hard1" id="hard" required="required">
+                                <label id="label">4</label>
+
+                                <input type="radio" name="ez/hd" value="hard2" id="hard" required="required">
+                                <label id="label">5 (very difficult)</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="rating">
+                        <td>On a scale of 1-5, how would you rate our website's usability?</td>
+                        <td class="rate">
+                            <div class="radios">
+                                <input type="radio" name="usability" value="low1" id="usability" required="required">
+                                <label id="label">1 (low usability)</label>
+
+                                <input type="radio" name="usability" value="low2" id="usability" required="required">
+                                <label id="label">2</label>
+
+                                <input type="radio" name="usability" value="med3" id="usability" required="required">
+                                <label id="label">3</label>
+
+                                <input type="radio" name="usability" value="high1" id="usability" required="required">
+                                <label id="label">4</label>
+
+                                <input type="radio" name="usability" value="high2" id="usability" required="required">
+                                <label id="label">5 (high usability)</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="rating">
+                        <td>On a scale from 0-5, how likely are you to recommend our website to a friend or colleague?</td>
+                        <td class="rate">
+                            <div class="radios">
+                                <input type="radio" name="recommendation" value="low1" id="recommendation" required="required">
+                                <label id="label">1 (not recommended)</label>
+
+                                <input type="radio" name="recommendation" value="low2" id="recommendation" required="required">
+                                <label id="label">2</label>
+
+                                <input type="radio" name="recommendation" value="med3" id="recommendation" required="required">
+                                <label id="label">3</label>
+
+                                <input type="radio" name="recommendation" value="high1" id="recommendation" required="required">
+                                <label id="label">4</label>
+
+                                <input type="radio" name="recommendation" value="high2" id="recommendation" required="required">
+                                <label id="label">5 (highly recommended)</label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Any comment? Please write out if you have any comment</td>
+                        <td>
+                            <textarea name="comment" rows="5" cols="50" id="comment" placeholder="Write your comment..."></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Any recommendation? Please write out if you have any recommendation</td> 
+                        <td>
+                            <textarea name="recommendation" rows="5" cols="50" id="recommendation" placeholder="Write your comment..."></textarea>
+                        </td>
+                    </tr>
+
+                    <tr class="rating">
+                        <td>Your overall satisfaction of the site</td>
+                        <td class="rate">
+                            <div class="radios">
+                                <input type="radio" name="satisfaction" value="low1" id="satisfaction" required="required">
+                                <label id="label">1 (not satisfied)</label>
+
+                                <input type="radio" name="satisfaction" value="low2" id="satisfaction" required="required">
+                                <label id="label">2</label>
+
+                                <input type="radio" name="satisfaction" value="med3" id="satisfaction" required="required">
+                                <label id="label">3</label>
+
+                                <input type="radio" name="satisfaction" value="high1" id="satisfaction" required="required">
+                                <label id="label">4</label>
+
+                                <input type="radio" name="satisfaction" value="high2" id="satisfaction" required="required">
+                                <label id="label">5 (very satisfied)</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+
+        <p>
+            <input type="submit" value="Submit" class="button">
+        </p>
+    </article>
+        <hr class="short-hr">
+    <footer>
+        <div>
+            <h3 class="h3-feedback">©<a href="AboutUs.html">Group_11</a> | Date updated: 22 / 11 / 2024</h3>
+            <h4 class="h4-feedback">Travel Recommendations students.swinburne.edu.my</h4>
+        </div>
+    </footer>
+</body>
+</html>

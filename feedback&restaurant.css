@@ -1,0 +1,456 @@
+/*Angela part*/
+.body-feedback {
+    background-image: url(Mount\ Everest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 5px;
+    color: rgb(49, 58, 61);
+    font-weight: bold;
+}
+
+
+h1 {
+    color: #191970;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.hr-feedback {
+    border: 2px solid cadetblue;
+    margin: 15px 0;
+}
+
+article p {
+    margin: 10px;
+}
+
+legend{
+    font-weight: bold;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fieldset-default {
+    border: 2px solid skyblue;
+    padding: 20px;
+    border-radius: 15px;
+    background: url(premium_photo-1688645554172-d3aef5f837ce.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.fieldset-background {
+    background: url(5b5996e99461225306e303b715fb9a3c.jpg) no-repeat;
+    background-color: #31b1c2;
+    background-size: cover;
+    border-radius: 20px;
+    color: black;
+    font-size: 23px;
+    width:fit-content;
+    height: auto;
+    margin-top: 15px;
+}
+
+
+.dt_tm {
+    border-radius: 5px;
+    background-color: cyan;
+}
+
+.rating {
+    background-position: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.rate{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.checkboxes, .radios {
+    justify-content: space-between;
+    width: 100%;
+    background-position: center;
+    margin-top: 10px;
+}
+
+.checkboxes input, .radios input {
+    margin-right: 10px;
+}
+
+input[type='radio'], input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 5px solid steelblue;
+    background-color: steelblue;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type='checkbox'] {
+    border-radius: 5px;
+}
+
+input[type='radio'] {
+    border-radius: 50%;
+}
+
+input[type='radio']:checked, input[type='checkbox']:checked {
+    border: 3px solid steelblue;
+    background-color: lightcyan;
+}
+
+.rate label {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    background-image: url(image/paper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    border-color: darkcyan;
+    text-align: start;
+    font-size: 17px;
+}
+
+table, table tr, table td{
+    border: 3px solid rgb(23, 136, 230);
+    margin: 10px;
+}
+
+table td {
+    width: 100%;
+}
+
+table td:first-child {
+    width: 30%;
+}
+
+table td{
+    text-align: center;
+    padding: 10px;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.button {
+    font-size: large;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: lightsteelblue;
+    border-color: cadetblue;
+    margin-top: 8px;
+}
+
+.button:hover {
+    background-color: lightblue;
+}
+
+/* Restaurants */
+
+.body-restaurant {
+    background: url(2020-01-13_eq-sabayon-service.webp) no-repeat center center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgb(49, 58, 61);
+    font-weight: bold;
+}
+
+p{
+    margin-left: 28px;
+}
+
+.h2 {
+    font-size: 20px;
+    color: black;
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+    flex: 1 0 200px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+} 
+
+figure:hover {
+    background-color: lightskyblue;
+}
+
+figure:active {
+    background-color: darkcyan;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.states {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+img {
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+}
+
+.hotels, .restaurants {
+    background-color: rgb(251, 251, 231);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0;                 /* Start off as invisible */
+    transform: translateY(-50px); /* Start above the screen */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth slide & fade-in */
+}
+
+.hotels.show, .restaurants.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hotels, .restaurants {
+    display: inline-block;
+    gap: 10px;
+}
+
+.hotels img, .restaurants img{
+    display: inline-block;
+    max-width: 25%;
+    margin-top: 15px;
+}
+
+.state-name {
+    font-size: 25px;
+    color: blueviolet;
+    font-weight: bolder;
+}
+
+.hotelInfo, .restaurantInfo {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.hotelInfo a:hover, .restaurantInfo a:hover {
+    color: darkorchid;
+}
+
+.restaurantInfo em {
+    color: yellowgreen;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-select {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-select select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.res-options {
+    display: none;
+}
+
+.res-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.res-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.res-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.car-card h3 {
+    margin: 10px 0 5px;
+}
+
+.res-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-1 {
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+    color: cyan;
+    margin-top: 500px;
+}
+
+.footer-2 {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    color: cyan;
+    margin-top: -30px;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(42, 42, 42, 0.9);
+    position: relative;
+    z-index: 1;
+    font-family:  Arial, Helvetica, sans-serif;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .navbar .logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .navbar .links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .links a:hover {
+    color: #00bcd4;
+  }
+  
+  .navbar .search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .search-icon:hover {
+    color: #00bcd4;
+  }
+  
+  /*footer*/
+.h3-feedback {
+
+    text-align: center;
+    font-size: 17px;
+    color: cyan;
+}
+        
+.h4-feedback {
+    text-align: center;
+    font-size: 12px;
+    color: cyan;
+}
+
+a{
+    color: cyan;
+}
+
+.short-hr {
+    border: black;
+}
+
+/* Navigation bar */
+.navbar-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(42, 42, 42, 0.9);
+    position: relative;
+    z-index: 1;
+    font-family:  Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar-restaurant .logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .navbar-restaurant .links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-restaurant .links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-restaurant .links a:hover {
+    color: #00bcd4;
+  }
+  
+  .navbar-restaurant .search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-restaurant .search-icon:hover {
+    color: #00bcd4;
+  }

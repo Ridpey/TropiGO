@@ -1,0 +1,760 @@
+/* General styles */
+.body-homepage {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(photo-1603787663416-88d33de66699.jpg) no-repeat center center;
+  background-position: center -220px;
+  color: white;
+  background-size: cover;
+  position: relative;
+}
+
+.body-homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(30, 60, 114, 0.8); /* 80% opacity overlay*/
+  z-index: -1; /*stays under every item*/
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  flex-shrink: 0; /* Prevents the heading from shrinking */
+  margin-top: 20px; /* Removes any unwanted margin at the top */
+  line-height: 1.5; /* Ensures the text is properly spaced */
+}
+
+ /*footer*/
+ h3  {
+  text-align: center;
+  font-size: 17px;
+  color: black;
+  margin-top: 0%;
+}
+      
+  h4 {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  margin: 0;
+}
+
+/* home page section with 80% screen padding */
+.main-content {
+  height: 23vh; /* 80% of the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45); /* Optional: Semi-transparent black background for contrast */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Optional: Subtle inner shadow */
+}
+
+/* text container */
+.text-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the line and text */
+}
+
+/* Vertical line */
+.vertical-line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  opacity: 0.7;
+  position: relative;
+}
+
+/* Heading */
+.text-container h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* Paragraph */
+.text-container p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-20px); /* Start slightly to the left */
+  animation: slide-out-from-line 1s ease-out forwards; /* Animation on page load */
+}
+
+/* Slide-in animation for paragraph */
+@keyframes slide-out-from-line {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Content below the main section */
+.page-content {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  min-height: 100vh; /* Ensures it covers the entire height of the viewport if there's little content */
+}
+
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(42, 42, 42, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+  color: #00bcd4;
+}
+
+.navbar .search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .search-icon:hover {
+  color: #00bcd4;
+}
+
+/* Search bar */
+.search-bar {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #008c9e;
+}
+
+/* image suggestion */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-item {
+  position: relative;
+  width: 33.33%;  /* Make images equal width */
+  max-width: 400px;
+  height: 200px;
+  overflow: hidden;  /* Prevents the image from overflowing */
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;  /* For smooth hover effect */
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;  /* Optional, for rounded corners */
+}
+
+.image-item:hover {
+  filter: brightness(0.8);  /* Darkens image */
+  transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+.price {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  display: none;  /* Hide initially */
+}
+
+.image-item:hover .price {
+  display: block;  /* Show price when image is hovered */
+}
+
+.short-hr {
+  width: 80%; /* Adjust the percentage or fixed width as needed */
+  margin: 0 auto; /* Centers the <hr> */
+}
+
+.collaborated-logo {
+  text-align: center;
+  margin: 20px 0; /* Adds space above and below the logo */
+}
+
+.collaborated-logo-img {
+  width: 100px; /* Reduce the width for a smaller logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.collaborated-logo-img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.collaborated-logo2 {
+  text-align: center;
+  margin: 20px 0; /* Adds space above and below the logo */
+}
+
+.collaborated-logo2-img {
+  width: 100px; /* Reduce the width for a smaller logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.collaborated-logo2-img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/*Hotels*/
+
+.body-hotel {
+  background-image: url(sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1-hotel {
+  color: #191970;
+  margin: 17px;
+}
+
+.hr-hotel {
+  border: 2px solid cadetblue;
+  margin: 15px 0;
+}
+
+article p {
+  margin: 10px;
+}
+
+/*feedback*/
+.Q {
+  border: 2px solid skyblue;
+  padding: 20px;
+  border-radius: 15px;
+  background-image: url(cloudy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.rating{
+  justify-content: space-evenly;
+  margin-top: 10px;
+  display: flex;
+}
+
+.rate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type='radio'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid steelblue;
+  background-color: steelblue;
+}
+
+input[type='radio']:checked {
+  border: 3px solid steelblue;
+  background-color: lightcyan;
+}
+
+#label {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  background-image: url(paper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  border-color: darkcyan;
+  text-align: start;
+  font-size: 17px;
+}
+
+.button {
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: lightsteelblue;
+  border-color: cadetblue;
+  margin-top: 8px;
+}
+
+.button:hover {
+  background-color: lightblue;
+}
+/*end feedback*/
+
+.h2 {
+  font-size: 20px;
+  color: black;
+}
+
+/*hotels*/
+figure {
+  text-align: center;
+  margin: 0;
+  flex: 1 0 200px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: lightsteelblue;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+} 
+
+figure:hover {
+  background-color: lightskyblue;
+}
+
+figure:active {
+  background-color: darkcyan;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+img {
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+}
+
+.hotels {
+  background-color: rgb(251, 251, 231);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 0;                 /* Start off as invisible */
+  transform: translateY(-50px); /* Start above the screen */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth slide & fade-in */
+}
+
+.hotels.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hotels {
+  display: inline-block;
+  gap: 10px;
+}
+
+.hotels img{
+  display: inline-block;
+  max-width: 25%;
+  margin-top: 15px;
+}
+
+.state-name {
+  font-size: 25px;
+  color: blueviolet;
+  font-weight: bolder;
+}
+
+.hotelInfo {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.hotelInfo a:hover {
+  color: darkorchid;
+}
+
+/* Navigation bar */
+.navbar-hotel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(42, 42, 42, 0.9);
+  position: relative;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+.navbar-hotel .logo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar-hotel .links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-hotel .links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-hotel .links a:hover {
+  color: #00bcd4;
+}
+
+.navbar-hotel .search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-hotel .search-icon:hover {
+  color: #00bcd4;
+}
+
+/* Search bar */
+.search-bar {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: url(photo-1603787663416-88d33de66699.jpg) no-repeat center center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #008c9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .links {
+      display: none;
+  }
+
+  .search-bar input {
+      width: 100%;
+  }
+}
+ /*footer*/
+.h3-hotel {
+  text-align: center;
+  font-size: 17px;
+  color: black;
+  margin-top: auto;
+}
+
+.h4-hotel {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  margin-top: -10px;
+}
+
+a{
+  color: black;
+}
+
+.short-hr {
+  width: 80%; /* Adjust the percentage or fixed width as needed */
+  margin: 0 auto; /* Centers the <hr> */
+}
+
+/* Car Rental */
+
+.body-carhire {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  background: url(photo-1603787663416-88d33de66699.jpg);
+}
+
+.header-carhire {
+  background-color: #0b2541;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.article-carhire {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 65px;
+}
+
+main, .button-carhire {
+  text-align:center;
+  margin-top: 5%;
+}
+
+.location-select {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-select select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.car-options {
+  display: none;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.car-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.car-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.car-card h3 {
+  margin: 10px 0 5px;
+}
+
+.car-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Navigation bar */
+.navbar-carhire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(42, 42, 42, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-carhire .logo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar-carhire .links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-carhire .links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-carhire .links a:hover {
+  color: #00bcd4;
+}
+
+.navbar-carhire .search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-carhire .search-icon:hover {
+  color: #00bcd4;
+}
+
+/* Search bar */
+.search-bar {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: url(photo-1603787663416-88d33de66699.jpg) no-repeat center center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #008c9e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .links {
+      display: none;
+  }
+
+  .search-bar input {
+      width: 100%;
+  }
+}
+
+/*footer*/
+.h3-carhire {
+text-align: center;
+font-size: 17px;
+color: black;
+margin-top: 44%;
+}
+    
+.h4-carhire {
+text-align: center;
+font-size: 12px;
+color: black;
+margin-top: -10px;
+}
+
+.a-carhire {
+  color: cyan;
+}

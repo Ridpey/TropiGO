@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    background: url(5b5996e99461225306e303b715fb9a3c.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: rgb(9, 9, 139);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flight Cards */
+.flight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flight-card {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.flight-card:hover {
+    transform: scale(1.02);
+}
+
+.flight-card h2 {
+    margin: 10px 0;
+    color: #0077b6;
+}
+
+.flight-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+.book-btn {
+    display: inline-block;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #005f91;
+}
+
+/* Footer */
+.footer-1 {
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-2 {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin-top: -30px;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(42, 42, 42, 0.9);
+    position: relative;
+    z-index: 1;
+    font-family:  Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar .logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .navbar .links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .links a:hover {
+    color: #00bcd4;
+  }
+  
+  .navbar .search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .search-icon:hover {
+    color: #00bcd4;
+  }
+
+  a{
+    color: white;
+  }

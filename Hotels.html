@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Hotel_Recommendations</title>
+    <meta charset="utf-8">
+    <meta name="author" content="G11">
+    <meta name="description" content="hotel_rec">
+    <meta name="keywords" content="hotel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body class="body-hotel">
+    <header>
+        <div class="navbar-hotel">
+            <a href="index.html">
+                <img src="photo_6125304580725129165_y.jpg" alt="TropiGO Logo" class="logo">
+            </a>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="flight.html">Flights</a>
+                <a href="Destinations.html">Destinations</a>
+                <a href="carhire.html">Car Rental</a>
+                <a href="restaurant_recommendation.html">Restaurants</a>
+                <a href="feedback.html">Feedbacks</a>
+                <a href="AboutUs.html">About Us</a>
+            </div>
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-bar">
+            <input type="text" placeholder="Destinations, Hotels, Flights, etc...">
+            <button>Search</button>
+        </div>
+
+        <h1 class="h1-hotel">Hotel Recommendations</h1>
+        <hr class="hr-hotel">
+    </header>
+
+    <article>
+        <h2 class="h2">Click on one to see recommendations for the top 5 hotels in each state.</h2>
+        <script src="Hotel.js"></script>
+        <section class="states">
+            <figure class="KL" onclick="hotelRec('KL')">
+                <img src="KualaL.jpeg" alt="Kuala_Lumpur"/>
+                <figcaption>Kuala Lumpur</figcaption>
+            </figure>
+
+            <figure class="Slngr" onclick="hotelRec('Slngr')">
+                <img src="Selangor.jpg" alt="Selangor"/>
+                <figcaption>Selangor</figcaption>
+            </figure>
+
+            <figure class="Jhr" onclick="hotelRec('Jhr')">
+                <img src="Johor.jpg" alt="Johor"/>
+                <figcaption>Johor</figcaption>
+            </figure>
+        
+            <figure class="Kdh" onclick="hotelRec('Kdh')">
+                <img src="Kedah.jpg" alt="Kedah"/>
+                <figcaption>Kedah</figcaption>
+            </figure>
+        
+            <figure class="Kltn" onclick="hotelRec('Kltn')">
+                <img src="Kelantan.jpg" alt="Kelantan"/>
+                <figcaption>Kelantan</figcaption>
+            </figure>
+        
+            <figure class="Mlk" onclick="hotelRec('Mlk')">
+                <img src="Melaka.jpg" alt="Melaka"/>
+                <figcaption>Melaka</figcaption>
+                <figcaption>(Malacca)</figcaption>
+            </figure>
+        
+            <figure class="N9" onclick="hotelRec('N9')">
+                <img src="Negeri9.jpg" alt="Negeri_Sembilan"/>
+                <figcaption>Negeri Sembilan</figcaption>
+            </figure>
+
+            <figure class="Trgnu" onclick="hotelRec('Trgnu')">
+                <img src="Terengganu.jpg" alt="Terengganu"/>
+                <figcaption>Terengganu</figcaption>
+            </figure>
+        
+            <figure class="Srwk" onclick="hotelRec('Srwk')">
+                <img src="Sarawak.jpg" alt="Sarawak"/>
+                <figcaption>Sarawak</figcaption>
+            </figure>
+        
+            <figure class="Prk" onclick="hotelRec('Prk')">
+                <img src="Perak.png" alt="Perak"/>
+                <figcaption>Perak</figcaption>
+            </figure>
+        
+            <figure class="Prls" onclick="hotelRec('Prls')">
+                <img src="Perlis.jpg" alt="Perlis"/>
+                <figcaption>Perlis</figcaption>
+            </figure>
+        
+            <figure class="Sbh" onclick="hotelRec('Sbh')">
+                <img src="Sabah.png" alt="Sabah"/>
+                <figcaption>Sabah</figcaption>
+            </figure>
+
+            <figure class="Lbn" onclick="hotelRec('Lbn')">
+                <img src="Labuan.jpg" alt="Labuan"/>
+                <figcaption>Labuan</figcaption>
+                <figcaption>(Labuan Island)</figcaption>
+            </figure>
+
+            <figure class="PPng" onclick="hotelRec('PPng')">
+                <img src="PulauP.jpg" alt="Pulau_Pinang"/>
+                <figcaption>Pulau Pinang</figcaption>
+                <figcaption>(Penang Island)</figcaption>
+            </figure>
+
+            <figure class="Ptj" onclick="hotelRec('Ptj')">
+                <img src="Putrajaya.jpg" alt="Putrajaya"/>
+                <figcaption>Putrajaya</figcaption>
+            </figure>
+
+            <figure class="Phg" onclick="hotelRec('Phg')">
+                <img src="Pahang.jpg" alt="Pahang"/>
+                <figcaption>Pahang</figcaption>
+            </figure>
+        </section>
+
+        <section id="hotels" class="hotels">
+            <h2>Top 5 Hotel Recommendations</h2>
+            <p id="hotelsRec">Click on one of them to view top 5 hotels recommendation of each state.</p>
+        </section>
+    </article>
+    <hr class="short-hr">
+    <footer>
+        <div>
+            <h3 class="h3-hotel">©<a href="AboutUs.html">Group_11</a> | Date updated: 22 / 11 / 2024</h3>
+            <h4 class="h4-hotel">Travel Recommendations students.swinburne.edu.my</h4>
+        </div>
+    </footer>
+</body-hotel>
+
+</html>
